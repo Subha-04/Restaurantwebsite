@@ -1,0 +1,173 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Background and Text Color Scheme */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black; /* Black background for the page */
+  color: white; /* White text color for readability */
+  line-height: 1.6;
+}
+
+/* Menu Section */
+.menu {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: #111; /* Darker black background */
+  display: flex;
+  flex-wrap: wrap;  /* Allow items to wrap to the next line if needed */
+  justify-content: center;  /* Center align the items */
+  gap: 20px; /* Adds space between food items */
+}
+
+/* Heading */
+.heading h1 {
+  font-size: 3rem;
+  color: red; /* Red color for the title */
+  margin-bottom: 10px;
+}
+
+.heading h3 {
+  font-size: 1.5rem;
+  color: yellow; /* Yellow color for the subtitle */
+  margin-top: 5px;
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 2px;
+}
+
+/* Food Items Section */
+.food-items {
+  display: flex;
+  flex-direction: column; /* Stack image and details vertically inside each item */
+  align-items: center;    /* Center the content horizontally within each item */
+  width: 300px;           /* Fixed width for the food items */
+  margin: 10px;
+  background-color: #222; /* Dark gray background for each item */
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+  transition: all 0.3s ease;
+}
+
+/* Image Styling */
+.food-items img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Details Styling */
+.details {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.details h5 {
+  font-size: 1.5rem;
+  color: yellow; /* Yellow for the name of the food item */
+}
+
+.details .price {
+  color: red; /* Red price for emphasis */
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.details p {
+  font-size: 1rem;
+  color: #ccc; /* Light gray for description text */
+  margin-bottom: 15px;
+  line-height: 1.4;
+  height: 60px; /* Fixed height for text to make the layout neat */
+  overflow: hidden;
+}
+
+/* Add to Cart Button Styling */
+.add-to-cart {
+  padding: 12px 25px;
+  background-color: red; /* Red background for the button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Hover effect for button */
+.add-to-cart:hover {
+  background-color: yellow; /* Yellow background on hover */
+  transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+/* Active effect for button (on click) */
+.add-to-cart:active {
+  background-color: #ffcc00; /* Slightly lighter yellow on click */
+  transform: scale(1); /* Return to original size on click */
+}
+
+/* Food Item Hover Effect */
+.food-items:hover {
+  transform: translateY(-10px); /* Lift the item slightly when hovered */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Increase shadow for focus effect */
+}
+
+/* Image Hover Effect */
+.food-items img:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on image hover */
+}
+
+/* Footer Styling (optional) */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: yellow;
+  font-size: 1rem;
+}
+
+/* Responsiveness for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .menu {
+    justify-content: center; /* Center-align items on smaller screens */
+    gap: 15px;
+  }
+
+  .food-items {
+    width: 200px; /* Adjust the width of food items for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heading h1 {
+    font-size: 2rem; /* Smaller heading for small screens */
+  }
+
+  .heading h3 {
+    font-size: 1rem; /* Smaller subtitle for small screens */
+  }
+
+  .food-items {
+    width: 150px; /* Even smaller food items on mobile screens */
+  }
+
+  .details h5 {
+    font-size: 1rem; /* Smaller item name on mobile */
+  }
+
+  .details .price {
+    font-size: 1.2rem; /* Adjust price size */
+  }
+
+  .add-to-cart {
+    font-size: 1rem; /* Adjust button size for mobile */
+  }
+}
